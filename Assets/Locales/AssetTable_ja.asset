@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97269afb30aa84742ae3f3342603618a, type: 3}
+  m_Name: AssetTable_ja
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: ja
+  m_SharedData: {fileID: 11400000, guid: 5eabcf3d8c05f074dbb20a59603fae6b, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1561827258368
+    m_Localized: 060e7e15f96ab5f419d5fd759fa954ba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2443864223744
+    m_Localized: f4903b9cdeadf354183285067bbba866
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10271648547123200
+    m_Localized: 600be2b94625dfb419d68f6b056cac47
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10272209426231296
+    m_Localized: 93689804411ef2148979a4166bf5c038
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25357714153058304
+    m_Localized: 42e425fd847220b43abd08c1bf9a9512
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25357942855872512
+    m_Localized: 9a0932596a3580e41986321fda8f7789
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25357272975192064
+    m_Localized: b8a55f9682b20ef4793d60dc05ab3818
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33160780675854336
+    m_Localized: 9b9f11e9a5bc81f49ad3fc2d1e1e427b
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33160986704261120
+    m_Localized: abca17857eba2324b9ff923bf5e9964e
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33161196016807936
+    m_Localized: 7a170d62f7753284fa4a186c933afa7e
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40562152614440960
+    m_Localized: b5d5068324e1dbc4380382f3e07f583c
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40564091574071296
+    m_Localized: 7e6b46c0764b76d4388e71212a3c0759
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40564906019827712
+    m_Localized: 8f27cb8f0e54b604f97ea55d2ebd1e5b
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53257989320650752
+    m_Localized: 879bd0440fabfb644be070e711f6d004
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

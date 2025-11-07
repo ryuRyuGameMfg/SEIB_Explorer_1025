@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: AssetTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: AssetTable
+  m_TableCollectionNameGuidString: 5eabcf3d8c05f074dbb20a59603fae6b
+  m_Entries:
+  - m_Id: 1561827258368
+    m_Key: scale_realistic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2443864223744
+    m_Key: scale_simplified
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10271648547123200
+    m_Key: carboncycle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10272209426231296
+    m_Key: watercycle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25357272975192064
+    m_Key: poolc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25357714153058304
+    m_Key: fluxc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25357942855872512
+    m_Key: reloc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33160780675854336
+    m_Key: fluxw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33160986704261120
+    m_Key: fluxs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33161196016807936
+    m_Key: poolw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40562152614440960
+    m_Key: shortwave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40564091574071296
+    m_Key: longwave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40564906019827712
+    m_Key: albedo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53257989320650752
+    m_Key: radiation_balance
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items:
+    - rid: 8615519668241694725
+  m_KeyGenerator:
+    rid: 8615519668241694722
+  references:
+    version: 2
+    RefIds:
+    - rid: 8615519668241694722
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1724445174586
+    - rid: 8615519668241694725
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 1561827258368
+          m_TableCodes:
+          - en
+          - ja
+        - m_KeyId: 2443864223744
+          m_TableCodes:
+          - en
+          - ja
+        - m_KeyId: 10271648547123200
+          m_TableCodes:
+          - en
+          - ja
+        - m_KeyId: 10272209426231296
+          m_TableCodes:
+          - ja
+          - en
+        - m_KeyId: 25357272975192064
+          m_TableCodes:
+          - ja
+          - en
+        - m_KeyId: 25357714153058304
+          m_TableCodes:
+          - en
+          - ja
+        - m_KeyId: 25357942855872512
+          m_TableCodes:
+          - en
+          - ja
+        - m_KeyId: 33160780675854336
+          m_TableCodes:
+          - en
+          - ja
+        - m_KeyId: 33160986704261120
+          m_TableCodes:
+          - en
+          - ja
+        - m_KeyId: 33161196016807936
+          m_TableCodes:
+          - en
+          - ja
+        - m_KeyId: 40562152614440960
+          m_TableCodes:
+          - en
+          - ja
+        - m_KeyId: 40564091574071296
+          m_TableCodes:
+          - en
+          - ja
+        - m_KeyId: 40564906019827712
+          m_TableCodes:
+          - en
+          - ja
+        - m_KeyId: 53257989320650752
+          m_TableCodes:
+          - ja
+          - en
+        m_TypeString: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null

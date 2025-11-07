@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-English (en)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-English (en)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 25ebd0f21cb5cc04c9a228996db2ed95
+  m_SerializeEntries:
+  - m_GUID: 3167c26dd66a9f44a836c2fc9748cb41
+    m_Address: Assets/Icons/ScaleLAI_Real_Eg.png
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8551569231a93d748be0177a18f82936
+    m_Address: Assets/Icons/ScaleLAI_Eg.png
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cfdfb663cafce5f468e9043b0729f2c8
+    m_Address: CarbonCycle3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 000d372857fedea48811aa568e5b7b82
+    m_Address: Legend_PoolC_e
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 77cf4290795f1a845a0126e9182cce9a
+    m_Address: Legend_FluxC_e
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3c1d70bd6b38664e908e58ab09f32ae
+    m_Address: Legend_RelocC_e
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb97c4f10165d0c4fbcedb323143b18f
+    m_Address: Legend_FluxW_e
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fae07aedd9e43ee4bab31d0b42aedc12
+    m_Address: Legend_FluxS_e 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6dbeb76cb538574697c06db63e65de7
+    m_Address: Legend_PoolW_e
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 51e5102012698f74d9437db7b5018c70
+    m_Address: Legend_RadShort_e
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e2f1fa0877ad3044b5cb3b080119813
+    m_Address: Legend_Albedo_e
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4cc491c634d0a44281cd0ff84f3cbf7
+    m_Address: Legend_RadLong_e
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac34c000080038e4f9b6d22127b6acc5
+    m_Address: RadiationBalance3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b238a210c3e31f34e97eec55725f6920
+    m_Address: WaterCycle3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 107f377a4c3a369488606579ff83f860, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d803038d7ff98d94e99c8b35f98e1e20, type: 2}
+    - {fileID: 11400000, guid: 801ea7af6e0e040488c2203743db6c0c, type: 2}

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_GUID: ac10a967e23155a4f8d7c0c945dae686
+  m_SerializeEntries:
+  - m_GUID: 5eabcf3d8c05f074dbb20a59603fae6b
+    m_Address: Assets/Locales/AssetTable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 93689804411ef2148979a4166bf5c038
+    m_Address: WaterCycleJ3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c51c513b4ed9bb44bb52fec4808860c7
+    m_Address: Assets/Locales/StringTable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 107f377a4c3a369488606579ff83f860, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: abe88269092bf644fa6c839b80a12662, type: 2}
+    - {fileID: 11400000, guid: cee692577f169a149ac3a746c7d7a080, type: 2}

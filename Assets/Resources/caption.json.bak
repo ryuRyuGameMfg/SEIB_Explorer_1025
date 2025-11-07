@@ -1,0 +1,176 @@
+{
+  "captions": [
+    
+    {
+    "_comment": "■■■ F1 (フラックス年集計値：炭素循環) ■■■■",
+    "loc": "F1", 
+    "jp": 
+    "陸域炭素循環は、大気・植生・土壌の3つの炭素プール間を回るCO₂フラックスで記述できます。植物は光合成によって大気中のCO₂を取り込み（総一次生産, GPP）、地上部・地下部の維持呼吸と成長呼吸を差し引いた分が純一次生産（NPP）として植物バイオマスに固定します。枯死・落葉・落枝・根系の脱落や根浸出物、さらには食植動物の糞・死骸を介してNPPの一部が土壌有機炭素へ移行します。土壌有機炭素は微生物や土壌動物の異化呼吸によりCO₂（嫌気条件下では CH₄）として大気へ戻ります。森林火災も短期的に大量のCO₂を放出する重要経路です。\nNEP（Net Ecosystem Production）は NEP = NPP − 土壌異化呼吸 − 撹乱損失 と定義され、正であれば炭素吸収源、負であれば放出源となります。\nSEIB-DGVM では、大気・植生・土壌の3プール間で交換されるCO₂フラックス（光合成、植物呼吸、土壌異化呼吸、火災由来 CO₂）のみを動的に扱い、動物呼吸、溶存炭素の河川輸送、生物起源の揮発性有機化合物（BVOC）放出、CH₄の大気放散などは対象外としています。",
+    "eg":
+    "Terrestrial carbon cycling can be described in terms of CO₂ fluxes among three carbon pools: the atmosphere, vegetation, and soil. Plants take up atmospheric CO₂ through photosynthesis (gross primary production, GPP); the portion remaining after subtracting maintenance and growth respiration from both above- and below-ground tissues is fixed in plant biomass as net primary production (NPP). Part of this NPP is transferred to soil organic carbon via litterfall (dead leaves, branches, root turnover), root exudates, and the dung and carcasses of herbivores. Soil organic carbon is returned to the atmosphere as CO₂ by microbial and soil-fauna heterotrophic respiration, or as CH₄ under anaerobic conditions. Forest fires are another important pathway that releases large amounts of CO₂ over short timescales.\nNet ecosystem production (NEP) is defined as NEP = NPP − heterotrophic soil respiration − disturbance losses; a positive value indicates that the ecosystem is a carbon sink, whereas a negative value indicates a carbon source.\nSEIB-DGVM dynamically simulates only the CO₂ fluxes exchanged among the three pools—photosynthesis, plant respiration, heterotrophic soil respiration, and fire-related CO₂ emissions. Processes such as animal respiration, fluvial export of dissolved carbon, emissions of biogenic volatile organic compounds (BVOCs), and atmospheric release of CH₄ are outside the model scope."
+     },
+    
+    {
+    "_comment": "■■■ F2 (フラックス年集計値：水循環) ■■■■",
+    "loc": "F2", 
+    "jp": 
+    "陸域水循環は、大気・植生・土壌・地下水・河川水系の各水プール間を水が行き交う一連のプロセスです。大気からの降水は樹冠に遮られ、一部は遮断蒸発として大気へ戻り、残りはスルーフォールやステムフローを経て地表に到達します。雪として降った水は樹冠上や地表に積もり、昇華あるいは融雪を経て再び循環に組み込まれます。地表に到達した水は、表面流としてただちに流出するか、地中へ浸透して土壌水となります。土壌水は蒸発散によって大気へ戻る一方、さらに深層へ浸透して地下水を形成し、基底流（baseflow）として河川へ供給されます。これらの水フラックスが相互に作用することで、陸域生態系の機能や水資源が規定されます。\nなお、SEIB‑DGVM ではスルーフォールとステムフロー、また樹冠上積雪と地表積雪を区別して扱っていません。",
+    "eg":
+    "The terrestrial water cycle is a chain of processes in which water moves among the atmospheric, vegetation, soil, groundwater, and riverine pools. Precipitation from the atmosphere is intercepted by the canopy and is partitioned into interception evaporation, throughfall, and stemflow. Snowfall accumulates on the canopy and on the ground, then re‑enters the cycle after sublimation or snowmelt. Water that reaches the surface either runs off immediately as surface flow or infiltrates into the ground to become soil water. Part of this soil water returns to the atmosphere through evapotranspiration, while the rest percolates deeper to form groundwater, which supplies rivers as baseflow. These interacting fluxes determine terrestrial ecosystem functioning and water resources. \nNote that SEIB‑DGVM does not distinguish between throughfall and stemflow, nor between canopy snow and ground snow."
+     },
+    
+    {
+    "_comment": "■■■ F3 (フラックス年集計値：放射収支) ■■■■",
+    "loc": "F3", 
+    "jp": 
+    "地球に入射する太陽放射の大部分は波長0.3–4 µmの短波放射で構成されます。そのうち雲粒や大気微粒子で散乱・吸収を経た一部が地表—とくに陸域植生—へ到達します。入射した短波放射は、地表のアルベドに応じて反射され、残りが吸収されます。吸収エネルギーは (1) 顕熱として大気へ、(2) 潜熱として水蒸気化に、(3) 光合成など生物学的エネルギーへ、そして (4) 波長4–100 µmの長波放射として再放射される経路に分配されます。\n\n大気中の水蒸気・二酸化炭素・メタンなどは可視域にはほぼ透明ですが、長波域では強い吸収帯を持つため、再放射された赤外線を吸収し再放出して地表を加熱します（温室効果）。こうした放射と非放射成分のエネルギーフラックスが釣り合うことで、陸域生態系の放射収支が決まります。\n\n詳細につきましては、水循環タブ（Wボタンで表示）中の各ヘルプアイコンをご参照ください。",
+    "eg":
+    "Most of the solar radiation that reaches the top of Earth’s atmosphere is short‑wave radiation (≈ 0.3–4 µm). After scattering and absorption by cloud particles and atmospheric aerosols, a portion reaches the surface—especially terrestrial vegetation. Incoming short‑wave radiation is partly reflected according to the surface albedo, while the remainder is absorbed. The absorbed energy is then partitioned into\n1. sensible heat flux to the atmosphere,\n\n2. latent heat flux through evapotranspiration,\n\n3. biochemical energy (e.g., photosynthesis), and\n\n4. long‑wave radiation (≈ 4–100 µm) re‑emitted from the surface.\n\nAtmospheric water vapor, carbon dioxide, methane, and other greenhouse gases are nearly transparent in the visible range but have strong absorption bands in the long‑wave range. They absorb the re‑emitted infrared radiation and re‑radiate it, warming the surface (the greenhouse effect). The balance among these radiative and non‑radiative energy fluxes determines the surface radiation budget of terrestrial ecosystems.\n\nFor more details, please refer to the help icons within the Radiation Balance tab (displayed in R)."
+     },
+    
+{
+  "_comment": "■■■ C1 (炭素循環：生態系の炭素貯留量) ■■■■",
+  "loc": "C1",
+  "jp": 
+  "生態系に貯蔵される有機炭素は、以下の5つのプールに分類して表示されます：木本バイオマス・草本バイオマス・枯死物・土壌炭素（易分解性）・土壌炭素（難分解性）。\n\nモデル内では、木本バイオマスはさらに、葉群・幹（粗根を含む）・細根・貯蔵器官・非構造炭素の5つのプールに、草本バイオマスは、地上部バイオマス・地下部バイオマス・貯蔵器官・非構造炭素の4つのプールに細分されて取り扱われています。\n\nバイオマスは、枯死・落葉・繁殖・食害などのプロセスを通じて枯死物プールに移行します。枯死物プールに蓄積された有機物は分解され、70％はCO₂として大気に放出され、残り30％が土壌炭素プールに加わるとしています。\n\n土壌炭素は、モデルにおいて易分解性と難分解性の2つに分けて取り扱われます。このうち難分解性の土壌炭素は、蓄積および分解に非常に長い時間を要し、準平衡（quasi equilibrium）に到達させるためには、冷温帯や亜寒帯においては1000～2000年程度のスピンアップ実行が必要です。",
+  "eg":
+  "Organic carbon stored in ecosystems is categorized and represented in the following five pools: woody biomass, herbaceous biomass, dead organic matter, soil carbon (labile), and soil carbon (recalcitrant).\n\nIn the model, woody biomass is further subdivided into five pools: foliage, stem (including coarse roots), fine roots, storage organs, and non-structural carbon. Herbaceous biomass is divided into four pools: aboveground biomass, belowground biomass, storage organs, and non-structural carbon.\n\nBiomass transitions to the dead organic matter pool through processes such as senescence, leaf fall, reproduction, and herbivory. The organic matter accumulated in the dead matter pool is decomposed, with 70% released into the atmosphere as CO₂ and the remaining 30% incorporated into the soil carbon pool.\n\nSoil carbon is treated in the model as two separate components: labile and recalcitrant. Among these, recalcitrant soil carbon requires a very long time to accumulate and decompose. To reach quasi-equilibrium, a spin-up run of approximately 1,000 to 2,000 years is required in cool temperate or sub-boreal regions."
+    },
+    
+    {
+  "_comment": "■■■ C2 (炭素循環：生態系外との炭素交換) ■■■■",
+  "loc": "C2",
+  "jp": 
+  "ここでは、大気と植生の間での炭素交換フラックスを表示します。\n\n大気中のCO₂は光合成によって炭化水素に変換され、植生バイオマスとして蓄積されます。植生バイオマスは、植物の呼吸や林野火災によってCO₂として再び大気中に放出されます。また、枯死物プールに移行した植生バイオマスは分解を受け、そのうち70％はCO₂として大気に放出され、残り30％が土壌炭素プール（易分解性＋難分解性）に加わるとしています。土壌炭素プールも分解呼吸を通じて大気中にCO₂として戻ります。",
+  "eg":
+  "This graph shows the carbon exchange fluxes between the atmosphere and vegetation.\n\nAtmospheric CO₂ is converted into hydrocarbons through photosynthesis and is stored as vegetation biomass. Vegetation biomass is returned to the atmosphere as CO₂ through plant respiration and wild fires.Additionally, vegetation biomass that transitions to the litter pool returns to the atmosphere as CO₂ through decomposition respiration."
+    },
+    
+   {
+  "_comment": "■■■ C3 (炭素循環：生態系内の炭素移流) ■■■■",
+  "loc": "C3",
+  "jp": 
+  "ここでは、植生内部で生じる「生物量 → 枯死物」と「枯死物 → 土壌炭素」への炭素フラックスを表示します。\n\n<B>生物量 → 枯死物フラックスについて</B>\nこのフラックスは、落葉、枯死、繁殖などに伴って植物バイオマスがリターへと移行するプロセスを示しています。モデル内では、木本植物の枯死が毎年12月31日に一括して処理される仕様となっており、その結果、12月のみ移流速度が異常に高くなるというパターンが生じます。このため、本来このフラックスは月単位（Monthly）の時系列で表示するのに適していないものの、モデルの挙動を理解する上で有用であるため、あえて表示しています。\n\n<B>枯死物 → 土壌炭素フラックスについて</B>\nリターとして蓄積された炭素は分解され、そのうち約70％はCO₂として大気中に放出され、残りの30％が土壌炭素プールに取り込まれると想定されています。土壌炭素プールは、易分解性と難分解性の2つに分けて扱っていますが、ここではどちらのプールに加わるかを区別せずに、全体としてのフラックスを表示しています。",
+  "eg":
+  "This section presents the fluxes occurring within vegetation from biomass to dead organic matter and from dead organic matter to soil carbon.\n\n<B>Biomass → Dead Organic Matter Flux</B>\nThis flux represents the transfer of plant biomass to litter as a result of processes such as leaf fall, senescence, and reproduction. In the model, woody plants are programmed to die collectively on December 31 each year. As a result, the transfer rate becomes extremely high only in December. Therefore, although this flux is not inherently suitable for display as a monthly time series, it is deliberately included here because it provides valuable insight into the model's behavior.\n\n<B>Dead Organic Matter → Soil Carbon Flux</B>\nOf the litter carbon that is decomposed, approximately 70% is released into the atmosphere as CO₂, while the remaining 30% is incorporated into the soil carbon pool. Although the soil carbon pool is divided into labile and recalcitrant components, this visualization does not distinguish between them and presents the flux as a whole."
+    },
+    
+    {
+  "_comment": "■■■ W1 (水循環：生態系外との水交換) ■■■■",
+  "loc": "W1",
+  "jp": 
+  "植生内外間における積雪を介さない水フラックスを表示します。生態系に流入するフラックスは正の値、流出するフラックスは負の値で表現されています。",
+  "eg":
+  "This graph displays the water flux between inside and outside of the vegetation that does not involve snow. Fluxes entering the ecosystem are represented by positive values, while fluxes leaving the ecosystem are represented by negative values."
+    },
+    
+    {
+  "_comment": "■■■ W2 (水循環：雪フラックス) ■■■■",
+  "loc": "W2",
+  "jp": 
+  "日平均気温が0℃未満のときの降水は、すべて降雪であると仮定し、積雪プールに加えられます。積雪は、昇華によって大気中に直接戻るか、融雪により地表に流出します。",
+  "eg": 
+  "When the daily mean air temperature is below 0°C, all precipitation is assumed to fall as snow and is added to the snow pool. Snow in the snow pool either returns directly to the atmosphere through sublimation or flows to the ground surface as meltwater."
+    },
+    
+    {
+  "_comment": "■■■ W3 (土壌含水量) ■■■■",
+  "loc": "W3",
+  "jp": 
+  "土壌第1～第3層における含水率の変化、圃場容水量、および萎れ点を表示します。圃場容水量および萎れ点は、土壌タイプに依存する固定データです。\n\n土壌第1層は深さ0～50cm、第2層は50～100cm、第3層は100～200cmに対応しています。\nSEIBでは、土壌深度0～200cmを10cm刻みに分割し、水分と熱の移動を計算していますが、ここでは便宜上、上記3層ごとの平均値を表示しています。\n\n<B>圃場容水量とは：</B>\n圃場容水量とは、土壌が保持できる水分の最大量です。雨や灌漑などによって土壌が一度飽和した後、水は重力によって排水されますが、その後に土壌中に残る水分量が圃場容水量です。この値は土壌の種類によって異なり、粘土質の土壌では高く、砂質では低い傾向があります。本モデルで圃場容水量は、植物が利用可能な土壌水分の上限値として扱われています。\n\n<B>萎れ点とは：</B>\n萎れ点とは、植物が水を吸収できなくなる土壌水分の下限を指します。植物の根は土壌中の水分を吸収して成長しますが、土壌含水率が少なくなると、根が水を吸い上げられなくなります。この状態になると植物はしおれ始め、回復できないほどになる土壌含水率が「萎れ点」です。萎れ点の値は土壌の性質によって異なり、粘土質の土壌では高く、砂質では低い傾向があります。",
+  "eg": 
+  "This section shows changes in soil moisture content in layers 1 to 3, along with the field capacity and wilting point. Both field capacity and wilting point are fixed values determined by soil type.\n\nSoil layer 1 corresponds to a depth of 0–50 cm, layer 2 to 50–100 cm, and layer 3 to 100–200 cm. In SEIB, the soil profile down to 200 cm is divided into 20 layers at 10 cm intervals for the calculation of water and heat transport, but here the values are averaged over the three aforementioned layers for simplicity.\n\n<B>About Field Capacity:</B>\nField capacity refers to the maximum amount of water that soil can retain. After the soil becomes saturated due to rainfall or irrigation, water drains away under the force of gravity. The amount of water remaining in the soil after this drainage is known as the field capacity. This value varies depending on the soil type, being higher in clay soils and lower in sandy soils. In this model, it is defined as the upper limit of water available to plants.\n\n<B>About Wilting Point:</B>\nThe wilting point refers to the lower limit of soil moisture at which plants can no longer absorb water. Plant roots take up water from the soil for growth, but as soil moisture decreases, the roots become unable to extract water. At this stage, plants begin to wilt, and if the moisture level drops further to a point from which they cannot recover, that moisture content is defined as the wilting point. Like field capacity, the wilting point depends on soil properties, being higher in clay soils and lower in sandy soils."
+    },    
+    
+    {
+  "_comment": "■■■ A1 (大気環境：気温) ■■■■",
+  "loc": "A1",
+  "jp": 
+  "日平均気温（℃）はモデルの入力値であり、SEIBのような植生モデルにおいて最も基本的かつ重要な駆動データの一つです。気温は、光合成速度、植物呼吸速度、土壌呼吸速度、蒸発散速度、積雪の融解速度、土壌温度変化など、多くの物理的・植物生理的プロセスを制御します。また、フェノロジー（展葉期や落葉期の切り替え）も主に気温によって決定されます。",
+  "eg": 
+  "The daily mean air temperature (°C) is an input variable for the model and is one of the most fundamental driving data in vegetation models such as SEIB. Air temperature regulates many physical and plant physiological processes, including photosynthesis, plant respiration, soil respiration, evapotranspiration, snowmelt, and soil temperature dynamics. In addition, phenology - such as the timing of leaf-out and leaf-fall - is also primarily controlled by temperature."
+    },
+    
+    {
+  "_comment": "■■■ A2 (大気環境：相対湿度) ■■■■",
+  "loc": "A2",
+  "jp": 
+  "日平均相対湿度（%）はモデルの入力値であり、蒸発速度および蒸散速度の計算、ならびに林野火災の強度の計算に用いられます。",
+  "eg": 
+  "The daily mean relative humidity (%) is an input variable for the model. It is used in the calculation of evaporation and transpiration rates, as well as in the estimation of wildfire intensity."
+    },
+    
+    {
+  "_comment": "■■■ A3 (大気環境：風速) ■■■■",
+  "loc": "A3",
+  "jp": 
+  "日平均風速（m/s）はモデルの入力値であり、SEIBでは、(1)大気と陸面との熱交換効率、および(2)林野火災の強度の計算に用いられます。\n\n(1) の熱交換効率の計算は、SEIB-DGVMに統合されている陸面物理過程モデル NOAH-LSMによって処理されます。(2)の林野火災の強度計算は、アフリカ大陸においてのみ適用されるアフリカ専用火災モジュールによって実行されます（アフリカ大陸以外の場所で適用される火災モジュールでは、風速を利用しません）。",
+  "eg": 
+  "The daily mean wind speed (m/s) is an input variable for the model and is used in SEIB for the following two purposes: (1) calculation of heat exchange efficiency between the atmosphere and the land surface, and (2) estimation of wildfire intensity.\n\nThe calculation of (1) is handled by the land surface physical process model NOAH-LSM, which is integrated into SEIB-DGVM. The calculation of (2), wildfire intensity, is carried out by a dedicated fire module used only for the African continent. Fire modules applied outside of Africa do not use wind speed."
+    },
+    
+    {
+  "_comment": "■■■ R1 (放射収支：短波放射) ■■■■",
+  "loc": "R1",
+  "jp": 
+  "ここでは、南中瞬間（太陽が真南に達する瞬間）の下向き短波放射強度〈単位 W m⁻²〉を直達光と拡散光に分けて表示し、あわせて上向き短波放射強度（地表からの反射光）も示します。\n\n<B>直達光と拡散光の分離手順:</B>\n入力された南中瞬間の全天日射量 G を、大気上端理論値 G₀（緯度と年日から算出）で割り、大気の透明度指数 Kₜ = G / G₀ を求めます。\nKₜ が小さいほど雲やエアロゾルによる減衰が強いとみなし、経験式を用いて直達比と拡散比を決定します。\n直達光成分は Kₜ に応じて減少し、残りが拡散光として届くため、Kₜ が低い（大気が不透明）ほど拡散比が高まります。全天日射量そのものも同時に減少する点に注意してください。\n\n<B>葉群への光分布の扱い:</B>\n・直達光は方向性が強く、日射を受ける葉群と陰になる葉群のコントラストが大きくなります。SEIB では幾何学的な日射計算を用いて葉群ごとの受光量を算出します。\n・拡散光は空全体からほぼ等方的に入射するため、葉群間の受光差が小さくなります。モデルでは拡散光を一様放射として扱い、同じ高さに位置している全ての葉群が同じ強度の拡散光を受けるとしています（太陽近傍散乱や地平線輝度の偏りは無視）。",
+  "eg": 
+  "Here, the downward short-wave radiation intensity at solar noon (the moment the sun reaches due south) is displayed, divided into direct and diffuse components (units: W m⁻²). The upward short-wave radiation (reflected from the ground surface) is also shown.\n\n<B>Procedure for separating direct and diffuse radiation:</B>\nThe total solar radiation at solar noon (G) is divided by the theoretical top-of-atmosphere value (G₀), which is calculated from the latitude and day of year, to obtain the atmospheric clearness index Kₜ = G / G₀.\nA smaller Kₜ indicates stronger attenuation by clouds or aerosols. Based on this, empirical formulas are used to determine the ratio of direct to diffuse radiation.\nAs Kₜ decreases, the direct component is reduced and the remaining radiation is treated as diffuse light. Note that the total solar radiation G also decreases along with Kₜ.\n\n<B>Treatment of light distribution within the canopy:</B>\n a. Direct radiation is highly directional, resulting in a strong contrast between sunlit and shaded leaf layers. SEIB calculates the irradiance received by each leaf group using geometric solar radiation models.\n\n b. Diffuse radiation enters from nearly all directions across the sky, so the difference in irradiance between leaf layers is smaller. The model treats diffuse radiation as uniform, assuming that all leaf groups at the same height receive diffuse radiation of the same intensity (anisotropies such as forward scattering near the sun or horizon brightness are not considered)."
+    },
+    
+    {
+  "_comment": "■■■ R2 (放射収支：長波放射) ■■■■",
+  "loc": "R2",
+  "jp": 
+  "ここでは、下向き長波放射フラックス、上向き長波放射フラックス、そしてその差し引き（Net値）の3つを表示します〈単位 W m⁻²〉。\n\n長波放射は、おおむね波長4–100 µmの中〜遠赤外域に相当します。地球は太陽から受け取った短波放射の一部を吸収し、そのエネルギーを長波放射として宇宙へ放出します。この地球長波放射（terrestrial longwave radiation）は地球エネルギーバランスの根幹をなします。\n\n下向き長波放射フラックスは入力値であり、雲や温室効果ガスが放射する大気放射に当たります。SEIB ではこれを陸面物理過程モデル NOAH‑LSM に渡し、蒸発散速度や融雪量の計算に利用します。\n\n上向き長波放射フラックスは、入力された気温と同じ温度を持つ黒体（放射率 ε = 1 と仮定）からの放射としてステファン＝ボルツマンの法則により簡易算出しています。実際には葉面や地表の放射率は約 0.95～0.99 で、表面温度も気温と一致しません。日射量、蒸散（気孔開閉）、相対湿度、風速、粗度長などの影響で葉温・地表温は気温より高くも低くもなり得るため、この近似は上向き長波を過小評価または過大評価する可能性があります。\n\nNet値（下向き − 上向き）が正のとき地表面は放射的にエネルギーを受け取り、負のとき放射でエネルギーを失っています。雲量が増えると下向き長波が強まり、晴天時には大気窓（8–13 µm）を通じて上向き長波が宇宙へ逃げやすくなるため、気象条件に応じてNet 値は大きく変動します。",
+  "eg": 
+  "This screen displays three quantities: the downward long‑wave radiation flux, the upward long‑wave radiation flux, and their difference (the Net value).\n\nLong‑wave radiation corresponds roughly to the mid‑ to far‑infrared range (4–100 µm). Earth absorbs part of the incoming short‑wave radiation from the Sun and re‑emits that energy to space as long‑wave radiation. This terrestrial long‑wave radiation is fundamental to the planet’s energy balance.\n\nThe downward long‑wave flux is an input value representing atmospheric emission from clouds and greenhouse gases. SEIB passes this flux to the land‑surface model NOAH‑LSM, where it is used to calculate evapotranspiration rates and snowmelt.\n\nThe upward long‑wave flux is estimated with the Stefan–Boltzmann law as the emission from a black body (emissivity ε = 1) at the same temperature as the input air temperature. In reality, the emissivity of leaves and soil is about 0.95–0.99, and surface temperature often differs from air temperature. Solar radiation, transpiration (stomatal regulation), relative humidity, wind speed, and surface roughness all modulate leaf and ground temperatures, so this approximation can under‑ or overestimate the upward long‑wave flux.\n\nWhen the Net value (downward − upward) is positive, the surface is gaining energy radiatively; when it is negative, the surface is losing energy. Net varies greatly with weather conditions: increased cloud cover strengthens downward long‑wave radiation, whereas under clear skies upward long‑wave radiation escapes more readily to space through the atmospheric window (8–13 µm)."
+    },
+    
+    {
+  "_comment": "■■■ R3 (放射収支：アルベド) ■■■■",
+  "loc": "R3",
+  "jp": 
+  "アルベドとは、入射短波放射に対する反射短波放射の比を示す 0〜1 の無次元量（太陽光の反射率）です。本画面では\n(1) 樹冠（植被）アルベド\n(2) 裸地（土壌）アルベド\n(3) 上記二つを面積加重平均した林分平均アルベド\nの3つを表示しています。\n\n<B>一般的な決定要因:</B>\nアルベドは主に次の順序で影響を受けます。\n① 積雪量（雪粒径や汚染物質も影響）\n② 植被率（葉面積指数・被覆度）\n③ 植被タイプ（常緑／落葉、葉の形質・色など）\n④ 土壌特性（色、有機物含量、粒径分布など）\n裸地の場合は、土壌含水率、葉や地表の濡れ具合、太陽高度による入射角の変化も影響します。\n\n<B>SEIB‑DGVM における実装:</B>\nSEIB では、植被と土壌の面積加重平均アルベドを求め、それを積雪量に応じて補正します。以下の要因は考慮していません。\n・土壌含水率、葉面の濡れ、太陽高度による日変化\n・雪粒径や雪面汚染による雪面アルベドの変化\n・ツンドラなどで重要となる蘚類・地衣類（非維管束植物）の寄与\n\n<B>モデル結果の読み解き:</B>\nアルベドが低いほど反射される短波放射が減り、吸収量が増えるため地表面付近が加熱されやすく、蒸発散速度も高まる傾向があります。ただしSEIBでは気温を外部から与えるため、この放射加熱が大気温度に波及するフィードバックは再現されません（蒸発散量は与えられた気温・飽差と計算された放射量から決定されます）。\n\n以上を踏まえ、表示される三つのアルベド値を比較することで、積雪や植被の変化が地表エネルギー収支に与える影響を把握できます。\n\n以下は主要なバイオーム（および土地被覆）における典型的なアルベドの値です。なお、亜寒帯林とツンドラでアルベドの幅が大きいのは、積雪の影響です。\n\nバイオーム                     アルベド\n熱帯林                         0.12-0.14\n温帯林                         0.1-0.18\n亜寒帯林（タイガ）             0.1-0.3\n北極ツンドラ                   0.2-0.8\n地中海性低木地帯               0.12-0.2\n熱帯サバンナ・草原             0.07-0.4\n温帯草原                       0.15-0.25\n砂漠                           0.2-0.4\n氷床                           0.5-0.8\n\nこの一覧表のデータソース\nTable 23.2 of <I>Terrestrial Global Productivity</I>, Edited by Jacques Roy, Bernard Saugier, Harold A. Mooney, Academic-Press, published in 2001",
+  "eg": 
+  "Albedo is a dimensionless quantity ranging from 0 to 1 that represents the ratio of reflected to incoming short‑wave radiation (the fraction of sunlight that is reflected). This screen shows three albedo values:\n(1) canopy (vegetation) albedo\n(2) bare‑ground (soil) albedo\n(3) stand‑average albedo, the area‑weighted mean of the first two.\n\n<B>General determinants:</B>\nAlbedo is influenced mainly in the following order:\n• snow cover (also affected by snow‑grain size and contaminants)\n• vegetation cover (leaf area index and fractional cover)\n• vegetation type (evergreen/deciduous, leaf traits, color, etc.)\n• soil properties (color, organic matter content, particle‑size distribution, etc.)\nFor bare ground, soil moisture, the wetness of leaves and the surface, and the solar elevation angle (incident angle) are also important.\n\n<B>Implementation in SEIB‑DGVM:</B>\nSEIB calculates the area‑weighted mean albedo of vegetation and soil and then adjusts it according to snow cover. The model does not consider:\n• variation due to soil moisture, leaf wetness, or diurnal changes in solar angle\n• changes in snow albedo caused by snow‑grain size or surface contamination\n• contributions from non‑vascular plants such as bryophytes and lichens, which can be significant in tundra ecosystems.\n\n<B>Interpreting the model output:</B>\nLower albedo means less short‑wave radiation is reflected and more is absorbed, which tends to warm the surface layer and increase evapotranspiration. However, SEIB prescribes air temperature from external input, so the feedback from radiative warming to air temperature is not represented. Evapotranspiration is determined from the prescribed air temperature, vapor‑pressure deficit, and the calculated radiation.\n\nBy comparing the three displayed albedo values, you can assess how changes in snow cover and vegetation affect the surface energy balance.\n\nThe following are typical albedo values for major biomes (and land cover types). The wide range of albedo values observed in boreal forests and tundra is due to the influence of snow cover.\n\nBiome                             Albedo\nTropical forests                  0.12-0.14\nTemperate forests                 0.1-0.18\nBoreal forests                    0.1-0.3\nArctic tundra                    0.2-0.8\nMediterranean shrublands         0.07-0.4\nTropical savannas & grassland    0.15-0.25\nTemperate grasslands             0.15-0.25\nDeserts                          0.5-0.8\n\nData source of above table:\nTable 23.1 of <I>Terrestrial Global Productivity</I>, Edited by Jacques Roy, Bernard Saugier, Harold A. Mooney, Academic-Press, published in 2001"
+    },
+
+    {
+  "_comment": "■■■ P1 ■■■■",
+  "loc": "P1",
+  "jp": 
+  "以下は、バイオームごとの代表的な炭素蓄積量を示したものです。ただし、生物量は遷移段階や土壌の栄養塩濃度、乾燥度などの環境条件によって大きく変動するため、ここに示す数値は、生育環境が整った極相林における目安と考えてください。なお、同様のデータは多くの文献で確認できますが、使用されている単位は様々です。たとえば、乾燥重量に基づいた「kg DM m⁻²（キログラム乾燥質量／平方メートル）」という単位も広く使用されているため、参照時には単位に十分ご注意ください。\n\nバイオーム                     バイオマス（Mg C/ha）\n熱帯林                         183.5\n温帯林                         145.0\n亜寒帯林（タイガ）             114.0\n北極ツンドラ                   6.85\n地中海性低木地帯               60\n熱帯サバンナ・草原             32.5\n温帯草原                       8.1\n砂漠                           2.9\n\nこの一覧表のデータソース\nTable 23.1 of <I>Terrestrial Global Productivity</I>, Edited by Jacques Roy, Bernard Saugier, Harold A. Mooney, Academic-Press, published in 2001",
+  "eg": 
+  "The following table presents representative carbon storage values for each biome. However, biomass can vary greatly depending on environmental factors such as successional stage, soil nutrient availability, and aridity. Therefore, the values shown here should be regarded as estimates based on mature climax forests under well-developed growing conditions. Similar data can be found in many publications, though the units used may differ. For instance, the unit kg DM m⁻² (kilograms of dry matter per square meter), based on dry weight, is also widely used. Please pay careful attention to the units when referring to such data.\n\nBiome                             Biomass (Mg C/ha)\nTropical forests                  183.5\nTemperate forests                 145.0\nBoreal forests                    114.0\nArctic tundra                    6.85\nMediterranean shrublands          60\nTropical savannas & grassland    32.5\nTemperate grasslands              8.1\nDeserts                           2.9\n\nData source of above table:\nTable 23.1 of <I>Terrestrial Global Productivity</I>, Edited by Jacques Roy, Bernard Saugier, Harold A. Mooney, Academic-Press, published in 2001"
+    },
+    
+    {
+  "_comment": "■■■ P2 ■■■■",
+  "loc": "P2",
+  "jp": 
+  "葉面積指数（Leaf Area Index: LAI）とは、植物の葉の密度や植生の構造を表す指標の一つです。\n地表面積1平方メートルあたりに存在する葉の総面積（平方メートル）を示す無次元の数値で表されます。\n例えば、LAIが5ということは、地表面積1平方メートルに対し、5平方メートルの葉が存在することを意味します。\n\nLAIは植物の光合成能力や蒸散による水の放出量、二酸化炭素の吸収能力など、生態系の機能を評価する重要な指標として、生態学や農学、気象学、リモートセンシングなどの幅広い分野で利用されています。\n\n一般的に、森林のように植物が密に繁茂する地域ではLAIが高くなり、草原や砂漠のような植物が少ない地域では低い値となります。\n近年では、地球規模で気候変動が進むなか、植生の変化を調べるために、衛星画像や地上測定を用いて世界中でLAIの観測が進められています。\n\n以下は典型的な自然植生のLAIの一覧表です。\n\nBiome: Mean ± Standard deviation\nAll Biomes: 4.51 ± 2.52\nForest, boreal deciduous broadleaf: 2.58 ± 0.73\nForest, boreal evergreen needleleaf: 2.65 ± 1.31\nCrops, temperate and tropical: 3.62 ± 2.06\nDeserts: 1.31 ± 0.85\nGrasslands, temperate and tropical: 1.71 ± 1.19\nPlantations (managed forests): 8.72 ± 4.32\nShrubland, heath or Mediterranean-type vegetation: 2.08 ± 1.58\nForest, boreal/temperate deciduous needleleaf: 4.63 ± 2.37\nForest, temperate deciduous broadleaf: 5.06 ± 1.60\nForest, temperate evergreen broadleaf: 5.70 ± 2.43\nForest, temperate evergreen needleleaf: 5.47 ± 3.37\nForest, tropical deciduous broadleaf: 3.92 ± 2.53\nForest, tropical evergreen broadleaf: 4.78 ± 1.70\nTundra, circumpolar and alpine: 1.88 ± 1.47\nWetlands, temperate and tropical: 6.34 ± 2.29\n\n上記一覧表のデータソース：\nScurlock, J. M. O., Asner, G. P., & Gower, S. T. (2001). Worldwide historical estimates of leaf area index, 1932-2000 (ORNL Technical Memorandum ORNL/TM-2001/268). Oak Ridge National Laboratory, Oak Ridge, Tennessee. Retrieved from https://www.researchgate.net/publication/23821646",
+  "eg": 
+  "The Leaf Area Index (LAI) is an indicator that represents the density and structure of plant leaves.\nIt expresses the total leaf area per unit ground surface area and is a dimensionless value.\nFor example, an LAI of 5 means there are 5 square meters of leaf surface over 1 square meter of ground.\n\nLAI is widely used in fields such as ecology, meteorology, agriculture, and remote sensing as an important parameter for assessing ecosystem functions such as photosynthesis, evapotranspiration, and carbon dioxide absorption.\n\nIn general, forests with dense vegetation have high LAI values, while sparsely vegetated areas like grasslands or deserts have lower values.\nRecently, LAI has been increasingly observed worldwide using satellite imagery and ground-based measurements, and it plays a key role in understanding vegetation changes due to global climate change.\n\nFollowings are typical LAI (Mean and S.D.) for each biome:\n\nBiome: Mean ± Standard deviation\nAll Biomes: 4.51 ± 2.52\nForest, boreal deciduous broadleaf: 2.58 ± 0.73\nForest, boreal evergreen needleleaf: 2.65 ± 1.31\nCrops, temperate and tropical: 3.62 ± 2.06\nDeserts: 1.31 ± 0.85\nGrasslands, temperate and tropical: 1.71 ± 1.19\nPlantations (managed forests): 8.72 ± 4.32\nShrubland, heath or Mediterranean-type vegetation  2.08 ± 1.58\nForest, boreal/temperate deciduous needleleaf: 4.63 ± 2.37\nForest, temperate deciduous broadleaf: 5.06 ± 1.60\nForest, temperate evergreen broadleaf: 5.70 ± 2.43\nForest, temperate evergreen needleleaf: 5.47 ± 3.37\nForest, tropical deciduous broadleaf: 3.92 ± 2.53\nForest, tropical evergreen broadleaf: 4.78 ± 1.70\nTundra, circumpolar and alpine: 1.88 ± 1.47\nWetlands, temperate and tropical: 6.34 ± 2.29\n\nData source of the table above:\nScurlock, J. M. O., Asner, G. P., & Gower, S. T. (2001). Worldwide historical estimates of leaf area index, 1932-2000 (ORNL Technical Memorandum ORNL/TM-2001/268). Oak Ridge National Laboratory, Oak Ridge, Tennessee. Retrieved from https://www.researchgate.net/publication/23821646"
+    },
+
+    {
+  "_comment": "■■■ I1 ■■■■",
+  "loc": "I1",
+  "jp": 
+  "SEIB-DGVMにおいてCO₂濃度が影響を及ぼすプロセスは、以下の3つです：光合成速度、気孔コンダクタンス、C3草本とC4草本の切り替え。それぞれについて以下に解説します。\n\n<B>(1) 光合成速度</B>\nSEIBにおける光合成速度の計算では、CO₂濃度が高くなるほど光合成速度が増加します（いわゆる施肥効果）。ただし、この効果には上限があり、計算には飽和型関数であるミカエリス-メンテン式が用いられているため、CO₂濃度が一定以上になると施肥効果の増加は頭打ちになります。\n\n<B>(2) 気孔コンダクタンス</B>\n気孔コンダクタンスの計算には、Leuning (1995) モデルが採用されています。CO₂濃度が高くなると気孔コンダクタンスは低下し、それに伴い蒸散量も減少します。その結果、土壌水分が保持されやすくなり、植物は水ストレスの影響を受けにくくなることが期待されます。\n\n<B>(3)C3草本とC4草本の切り替え</B>\nSEIBでは、草本植物はC3草本とC4草本という2種類のPFT（植生機能型）で構成されており、どちらが優占するかはCollatzら（1998）Oecologia 114の図1bに基づいて決定されます。この図によれば、気温が高く、大気中のCO₂濃度が低い環境ではC4草本が優占しやすくなります。具体的には、CO₂濃度が250、410、500 ppmの場合に、それぞれ年平均気温が12.5℃、21.1℃、25.5℃を上回ると、C4草本が優占するようになります。\nただし、実際には土壌の乾燥度など他の環境条件も影響し、乾燥条件下ではC4草本がより優占しやすくなります。そのため、SEIBモデルは乾燥条件下におけるC4草本の優占度を過小評価している可能性があります。",
+  "eg": 
+  "In the SEIB-DGVM, the processes influenced by CO₂ concentration are as follows: photosynthetic rate, stomatal conductance, and the switch between C3 and C4 grasses. Each of these processes is explained below.\n\n<B>(1) Photosynthetic rate</B>\nIn SEIB, the calculation of photosynthetic rate shows an increase with higher CO₂ concentrations (the so-called fertilization effect). However, this effect has an upper limit because the calculation employs a saturating function, specifically the Michaelis-Menten equation, which means that the fertilization effect plateaus once CO₂ concentrations reach a certain level.\n\n<B>(2) Stomatal conductance</B>\nStomatal conductance is calculated using the Leuning (1995) model. As CO₂ concentration increases, stomatal conductance decreases, resulting in reduced transpiration. Consequently, soil moisture is retained more effectively, potentially reducing the impact of water stress on plants.\n\n<B>(3) Switch between C3 and C4 grasses</B>\nIn SEIB, grass plants are categorized into two Plant Functional Types (PFTs): C3 and C4 grasses. The dominance between these two types is determined based on Figure 1b from Collatz et al. (1998) Oecologia 114. According to this figure, C4 grasses tend to dominate under conditions of higher temperature and lower atmospheric CO₂ concentration. Specifically, at CO₂ concentrations of 250, 410, and 500 ppm, C4 grasses become dominant when the annual average temperature exceeds approximately 12.5°C, 21.1°C, and 25.5°C, respectively.\nHowever, in reality, other environmental factors, such as soil aridity, also influence grass dominance, with C4 grasses generally becoming more dominant under dry conditions. Therefore, the SEIB model may underestimate the dominance of C4 grasses under dry conditions."
+    },
+    
+    {
+  "_comment": "■■■ I2 ■■■■",
+  "loc": "I2",
+  "jp": 
+  "シミュレーション期間中の年降水量と年平均気温の推移を、Whittaker（ホイッタカー）の植生型上で表示します。Whittakerの植生型とは、気候とバイオーム（Biome）の地理分布とを対応づけるシンプルな区分法です。季節変化を無視するなど非常に単純なスキームであるため、実際の植生分布と一致しない場所も多く存在します。このような気候と植生の経験的な対応関係は、Climatic Envelopeと呼ばれ、現在では機械学習などを用いた、より複雑かつ信頼性の高い手法が開発されています（例えば、Sato & Ise 2022, GMD 15, doi 10.5194/gmd-15-3121-2022）。しかしながら、図1枚で簡潔に表現できる利便性があるため、このパネル表示のような用途では現在でも広く使われています。",
+  "eg": 
+  "The annual precipitation and mean annual temperature over the simulation period are plotted on Whittaker's biome classification. Whittaker's biome classification is a simple scheme that empirically links climate with the geographic distributions of biomes. Due to its simplicity, which involves ignoring seasonal variations, this scheme often fails to align well with actual vegetation distributions. Such empirical relationships between climate and vegetation are commonly called 'climatic envelopes,' and today, more sophisticated and reliable methods, including machine-learning approaches, have been developed (e.g., Sato & Ise 2022, GMD 15, doi:10.5194/gmd-15-3121-2022). Nevertheless, Whittaker's scheme continues to be widely used for applications such as this panel display, due to its advantage of representing vegetation-climate relationships simply and clearly on a single image."
+    }
+    
+  ]
+}

@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Japanese (ja)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Japanese (ja)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 9c562e718f8a9394db305c2169bee076
+  m_SerializeEntries:
+  - m_GUID: 060e7e15f96ab5f419d5fd759fa954ba
+    m_Address: Assets/Icons/ScaleLAI_Real_Jp.png
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4903b9cdeadf354183285067bbba866
+    m_Address: Assets/Icons/ScaleLAI_Jp.png
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 600be2b94625dfb419d68f6b056cac47
+    m_Address: CarbonCycleJ3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b8a55f9682b20ef4793d60dc05ab3818
+    m_Address: Legend_PoolC_j
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42e425fd847220b43abd08c1bf9a9512
+    m_Address: Legend_FluxC_j
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a0932596a3580e41986321fda8f7789
+    m_Address: Legend_RelocC_j
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9b9f11e9a5bc81f49ad3fc2d1e1e427b
+    m_Address: Legend_FluxW_j
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: abca17857eba2324b9ff923bf5e9964e
+    m_Address: Legend_FluxS_j 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a170d62f7753284fa4a186c933afa7e
+    m_Address: Legend_PoolW_j
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b5d5068324e1dbc4380382f3e07f583c
+    m_Address: Legend_RadShort_j
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f27cb8f0e54b604f97ea55d2ebd1e5b
+    m_Address: Legend_Albedo_j
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e6b46c0764b76d4388e71212a3c0759
+    m_Address: Legend_RadLong_j
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 879bd0440fabfb644be070e711f6d004
+    m_Address: RadiationBalanceJ3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 107f377a4c3a369488606579ff83f860, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: fd27bc506d090fd46acb3d138e19a968, type: 2}
+    - {fileID: 11400000, guid: 7dd16c2793fc49b4d95469d5cae7e38b, type: 2}

@@ -1,0 +1,333 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: c51c513b4ed9bb44bb52fec4808860c7, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 1666492850979733557
+  m_TableData:
+  - m_Id: 16532418560
+    m_Localized: Open New File
+    m_Metadata:
+      m_Items: []
+  - m_Id: 489545052160
+    m_Localized: Legend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 565642309632
+    m_Localized: Return to Main Screen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 881624395776
+    m_Localized: Simplified View
+    m_Metadata:
+      m_Items: []
+  - m_Id: 967154642944
+    m_Localized: Realistic View
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2537644666880
+    m_Localized: "\u65E5\u672C\u8A9E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17535028736000
+    m_Localized: Woody PFT(s) appearing in this simulation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22870481219584
+    m_Localized: 'Forest Size: {0} (m)'
+    m_Metadata:
+      m_Items:
+      - rid: 1666492850979733557
+  - m_Id: 1982926567288832
+    m_Localized: File Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12513198312304640
+    m_Localized: Display Target
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22650014092800000
+    m_Localized: Annual Fluxes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22785242102804480
+    m_Localized: Carbon Cycle (annual total)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22785350940798976
+    m_Localized: Water Cycle (annual total)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37509526213668864
+    m_Localized: C-Cycle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37544828932239360
+    m_Localized: Carbon Cycle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37547866170372096
+    m_Localized: Carbon stocks (MgC/ha)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37547871228702720
+    m_Localized: External exchange (MgC/ha/month)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37547872872869888
+    m_Localized: Intra-Reloc. (MgC/ha/month)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45539214601269248
+    m_Localized: Water related
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45539784355524608
+    m_Localized: External water flux (mm/month)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45540385890021376
+    m_Localized: Snow flux (kg/m2/month)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45540496779030528
+    m_Localized: Snow pool (kg/m2)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45540549555957760
+    m_Localized: Soil Env. (Moist. & Temp.)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45678722072227840
+    m_Localized: Water Cycle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53074732486537216
+    m_Localized: Radiation Balance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53077437531598848
+    m_Localized: Shortwave Rad. (midday, W/m2)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53079585606643712
+    m_Localized: Longwave Rad. (daily mean, W/m2)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53080442926575616
+    m_Localized: Albedo (Frac.)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65774354669547520
+    m_Localized: Radiation Balance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65778517432381440
+    m_Localized: Horizontal Axis Range
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71076968852402176
+    m_Localized: '* Forcing data'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71077100113145856
+    m_Localized: '* Forcing data'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71077247731675136
+    m_Localized: '* Forcing data'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71077043922055168
+    m_Localized: All Variables are Simulation Output
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71077141410263040
+    m_Localized: All Variables are Forcing Data
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71084720282710016
+    m_Localized: Air Temp. (C)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71085189281394688
+    m_Localized: Relative Humid. (%)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71085422224650240
+    m_Localized: Wind Velocity (m/s)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71100190675218432
+    m_Localized: AtmEnviron
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71114144885551104
+    m_Localized: '{0}yr'
+    m_Metadata:
+      m_Items:
+      - rid: 1666492850979733557
+  - m_Id: 104705563743006720
+    m_Localized: Help
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104705889959194624
+    m_Localized: Close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 122527278241984512
+    m_Localized: Plant Properties
+    m_Metadata:
+      m_Items: []
+  - m_Id: 122529657871970304
+    m_Localized: Biomass (MgC/ha)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 122529947278946304
+    m_Localized: "Leaf Area Index (m\xB2/m\xB2)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124366973661917184
+    m_Localized: Simulation Info.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124577358147006464
+    m_Localized: Location
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124578214200258560
+    m_Localized: 'Lat. : {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 1666492850979733557
+  - m_Id: 124578766833364992
+    m_Localized: 'Lon. : {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 1666492850979733557
+  - m_Id: 124579972502827008
+    m_Localized: 'Alt. : {0} m'
+    m_Metadata:
+      m_Items:
+      - rid: 1666492850979733557
+  - m_Id: 124580576184807424
+    m_Localized: Soil Prop. (Frac.)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124581077001482240
+    m_Localized: "Field Cap.\uFF1A{0}"
+    m_Metadata:
+      m_Items:
+      - rid: 1666492850979733557
+  - m_Id: 124581994044108800
+    m_Localized: "Wilt. Poi. \uFF1A{0}"
+    m_Metadata:
+      m_Items:
+      - rid: 1666492850979733557
+  - m_Id: 124582568558899200
+    m_Localized: "Albedo \uFF1A{0}"
+    m_Metadata:
+      m_Items:
+      - rid: 1666492850979733557
+  - m_Id: 124583822139895808
+    m_Localized: Changes in Atom. CO2 (ppm)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124584631992889344
+    m_Localized: Annual Precip. & Temp. Change
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152125638368079872
+    m_Localized: "Y-axis (SWC):\r\nMax = FC, Min = PWP\r\n\nX-axis (Temp):\r\nGray
+      \u2264 0 \xB0C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166016901098024960
+    m_Localized: Simulation Configurations
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166017527496355840
+    m_Localized: Site
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166017938039025664
+    m_Localized: Output File Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166018462255722496
+    m_Localized: Sim. Years (10-200)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166018843710894080
+    m_Localized: "Latitude\n(-90\uFF5E90) "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166019236905922560
+    m_Localized: "Longitude\n(-180\uFF5E180) "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166019897827569664
+    m_Localized: CO2 Data
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166020165772292096
+    m_Localized: Climate Data
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166020608044871680
+    m_Localized: Forcing Data Modifiers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166021936083152896
+    m_Localized: Air temp.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166022175590494208
+    m_Localized: Daily Range of Air temp.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166022458542436352
+    m_Localized: Relative Humidity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166022764353335296
+    m_Localized: Precipitation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166023137231155200
+    m_Localized: Shotwave Radiation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166023367062237184
+    m_Localized: Atm. CO2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166031274684231680
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166031455681032192
+    m_Localized: Stop
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 1666492850979733557
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00b0e8f2cc14000000b06820f0a5fc0000b028cc3997ba0100b0a877ba97ba0100b0282fd398ba0100b06858d499ba0100b068dca99aba0100b028a02f9bba01

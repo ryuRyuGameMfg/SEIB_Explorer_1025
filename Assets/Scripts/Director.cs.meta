@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: fcd96972b5473c54e927302a82f43b17
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - parent: {instanceID: 0}
+  - parent2: {instanceID: 0}
+  - groundTexture: {instanceID: 0}
+  - planePrefab: {instanceID: 0}
+  - sliderYear: {instanceID: 0}
+  - textComponent: {instanceID: 0}
+  - realisticButton: {instanceID: 0}
+  - simplifiedButton: {instanceID: 0}
+  - grassButton: {instanceID: 0}
+  - realisticScale: {instanceID: 0}
+  - simplifiedScale: {instanceID: 0}
+  - sound1: {fileID: 8300000, guid: 439ac4b284e7576448a2fd8a0aed4227, type: 3}
+  - sound2: {fileID: 8300000, guid: 0f5b89edd25153a4b8851b5bde246ceb, type: 3}
+  - sound3: {fileID: 8300000, guid: 9784d1f31ed5cf3409e9bfd3cdb8fa9b, type: 3}
+  - sound4: {fileID: 8300000, guid: 678a8763bb3a0874793e58aa9a4a1484, type: 3}
+  - sound5: {fileID: 8300000, guid: 7aa89580723ff6541a2a5edce9fe3dc0, type: 3}
+  - sound6: {fileID: 8300000, guid: 43546c4d32282d0419e479b4ffd5d5d3, type: 3}
+  - sound7: {fileID: 8300000, guid: 34bb654b519fc8d4194298855d0b0f56, type: 3}
+  - sound8: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
