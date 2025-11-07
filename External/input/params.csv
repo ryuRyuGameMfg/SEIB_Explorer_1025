@@ -1,0 +1,2 @@
+AirTmp_bias, TmpRange_bias, RH_bias, Precip_bias, Rad_bias, CO2_bias, site, outFN_Result, simYear, latitude, longitude, fileNameCO2, fileNameClimate
+0,1,1,1,1,0,"I_Specify_It","C:\Users\hsato\Dropbox\UNITY\SEIB_Explorer_1025\External\temp\resultOutput",30,40,100,"C:\Users\hsato\Dropbox\UNITY\SEIB_Explorer_1025\External\temp\co2_1850_2100_rcp26.dat","C:\Users\hsato\Dropbox\UNITY\SEIB_Explorer_1025\External\temp\climate_Nakagawa_1981_1990.txt"
