@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEIB Explorer - Modern SF Design</title>
+    <link rel="stylesheet" href="style.css" id="theme-stylesheet">
+</head>
+<body>
+    <div class="app-frame">
+        <div class="content-wrapper">
+            <aside class="side-panel">
+                <div class="panel-content-wrapper">
+                    <div class="panel-content active" id="panel-simulation">
+                        <div class="sf-card">
+                            <h3 class="card-title">
+                                <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" class="icon-outline"></circle></svg>
+                                地球プレビュー
+                            </h3>
+                            <div class="globe-stack">
+                                <div class="globe-circle large"></div>
+                                <input type="range" class="basic-slider" value="50">
+                                <p class="placeholder-text">地球ビュー（Unity側で差し替え）</p>
+                            </div>
+                        </div>
+
+                        <div class="sf-card">
+                            <h3 class="card-title">
+                                <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" class="icon-outline"></rect></svg>
+                                地点 & 土壌情報
+                            </h3>
+                            <div class="metrics-grid">
+                                <div class="metrics-item">
+                                    <span class="metrics-label">緯度 Lat.</span>
+                                    <span>0.0</span>
+                                </div>
+                                <div class="metrics-item">
+                                    <span class="metrics-label">経度 Lon.</span>
+                                    <span>0.0</span>
+                                </div>
+                                <div class="metrics-item">
+                                    <span class="metrics-label">標高 Alt.</span>
+                                    <span>-50 m</span>
+                                </div>
+                                <div class="metrics-item">
+                                    <span class="metrics-label">Field Cap.</span>
+                                    <span>0.00</span>
+                                </div>
+                                <div class="metrics-item">
+                                    <span class="metrics-label">Wilt. Poi.</span>
+                                    <span>0.32</span>
+                                </div>
+                                <div class="metrics-item">
+                                    <span class="metrics-label">Albedo</span>
+                                    <span>0.20</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sf-card">
+                            <h3 class="card-title">
+                                <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="4,16 12,8 20,12" class="icon-stroke"></polyline></svg>
+                                大気中CO₂濃度
+                            </h3>
+                            <div class="chart-placeholder tall">
+                                <p class="placeholder-text">CO₂時系列グラフ（Unity側で差し替え）</p>
+                            </div>
+                            <input type="range" class="basic-slider" value="30">
+                        </div>
+
+                        <div class="sf-card">
+                            <h3 class="card-title">
+                                <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18L10 8l4 5 6-7" class="icon-stroke"></path></svg>
+                                年降水量・年平均気温
+                            </h3>
+                            <div class="thumbnail-placeholder tall">
+                                <p class="placeholder-text">バイオーム分布グラフ（Unity側で差し替え）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-content" id="panel-legend">
+                        <div class="panel-header span-2">
+                            <h2 class="panel-title">凡例</h2>
+                            <span class="panel-code">LEG-02</span>
+                        </div>
+                        <div class="sf-card span-2">
+                            <h3 class="card-title">
+                                <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="14" height="14" class="icon-fill"></rect></svg>
+                                植物機能型一覧
+                            </h3>
+                            <ul class="legend-list">
+                                <li class="legend-item"><span class="legend-color color-a"></span>常緑針葉樹</li>
+                                <li class="legend-item"><span class="legend-color color-b"></span>落葉針葉樹</li>
+                                <li class="legend-item"><span class="legend-color color-c"></span>常緑広葉樹</li>
+                                <li class="legend-item"><span class="legend-color color-d"></span>落葉広葉樹</li>
+                                <li class="legend-item"><span class="legend-color color-e"></span>C3草本</li>
+                                <li class="legend-item"><span class="legend-color color-f"></span>C4草本</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="panel-content" id="panel-material">
+                        <div class="panel-header span-2">
+                            <h2 class="panel-title">物質循環</h2>
+                            <span class="panel-code">MAT-03</span>
+                        </div>
+                        <div class="sf-card span-2">
+                            <h3 class="card-title">
+                                <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3" class="icon-fill"></circle><circle cx="12" cy="16" r="3" class="icon-outline"></circle></svg>
+                                年間フラックス概要
+                            </h3>
+                            <div class="diagram-placeholder">
+                                <p class="placeholder-text">年間物質フラックス図（Unity側で差し替え）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-content" id="panel-carbon">
+                        <div class="panel-header span-2">
+                            <h2 class="panel-title">炭素循環</h2>
+                            <span class="panel-code">CAR-04</span>
+                        </div>
+                        <div class="sf-card span-2">
+                            <h3 class="card-title">
+                                <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="4,16 10,10 14,14 20,8" class="icon-stroke"></polyline></svg>
+                                炭素ストック
+                            </h3>
+                            <div class="chart-placeholder">
+                                <p class="placeholder-text">炭素ストックグラフ（Unity側で差し替え）</p>
+                            </div>
+                        </div>
+                        <div class="sf-card span-2">
+                            <h3 class="card-title">
+                                <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="8" width="12" height="8" class="icon-outline"></rect></svg>
+                                外部交換
+                            </h3>
+                            <div class="chart-placeholder">
+                                <p class="placeholder-text">炭素フラックスグラフ（Unity側で差し替え）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-content" id="panel-water">
+                        <div class="panel-header span-2">
+                            <h2 class="panel-title">水循環</h2>
+                            <span class="panel-code">WAT-05</span>
+                        </div>
+                        <div class="sf-card span-2">
+                            <h3 class="card-title">
+                                <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-2 3-6 7-6 10a6 6 0 0 0 12 0c0-3-4-7-6-10z" class="icon-outline"></path></svg>
+                                水フラックスサマリー
+                            </h3>
+                            <div class="chart-placeholder">
+                                <p class="placeholder-text">水循環グラフ（Unity側で差し替え）</p>
+                            </div>
+                        </div>
+                        <div class="sf-card span-2">
+                            <h3 class="card-title">
+                                <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="4,14 8,10 12,14 16,10 20,14" class="icon-stroke"></polyline></svg>
+                                積雪動態
+                            </h3>
+                            <div class="chart-placeholder">
+                                <p class="placeholder-text">積雪・土壌水グラフ（Unity側で差し替え）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-content" id="panel-atmospheric">
+                        <div class="panel-header span-2">
+                            <h2 class="panel-title">大気環境</h2>
+                            <span class="panel-code">ATM-06</span>
+                        </div>
+                        <div class="sf-card span-2">
+                            <h3 class="card-title">
+                                <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="16" x2="20" y2="8" class="icon-stroke"></line></svg>
+                                気温サマリー
+                            </h3>
+                            <div class="chart-placeholder">
+                                <p class="placeholder-text">気温推移グラフ（Unity側で差し替え）</p>
+                            </div>
+                        </div>
+                        <div class="sf-card span-2">
+                            <h3 class="card-title">
+                                <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12" class="icon-stroke"></line></svg>
+                                風速・湿度
+                            </h3>
+                            <div class="data-grid">
+                                <div class="data-item"><span class="data-key">平均風速</span><span class="data-value">2.5 m/s</span></div>
+                                <div class="data-item"><span class="data-key">相対湿度</span><span class="data-value">65%</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-content" id="panel-radiation">
+                        <div class="panel-header span-2">
+                            <h2 class="panel-title">放射収支</h2>
+                            <span class="panel-code">RAD-07</span>
+                        </div>
+                        <div class="sf-card span-2">
+                            <h3 class="card-title">
+                                <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3" class="icon-fill"></circle><rect x="6" y="12" width="12" height="6" class="icon-outline"></rect></svg>
+                                短波放射
+                            </h3>
+                            <div class="chart-placeholder">
+                                <p class="placeholder-text">短波放射グラフ（Unity側で差し替え）</p>
+                            </div>
+                        </div>
+                        <div class="sf-card span-2">
+                            <h3 class="card-title">
+                                <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="8" width="16" height="8" class="icon-outline"></rect></svg>
+                                長波放射
+                            </h3>
+                            <div class="data-grid">
+                                <div class="data-item"><span class="data-key">下向き放射</span><span class="data-value">350 W/m²</span></div>
+                                <div class="data-item"><span class="data-key">上向き放射</span><span class="data-value">420 W/m²</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-content" id="panel-plant">
+                        <div class="panel-header span-2">
+                            <h2 class="panel-title">植物特性</h2>
+                            <span class="panel-code">PLT-08</span>
+                        </div>
+                        <div class="sf-card span-2">
+                            <h3 class="card-title">
+                                <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16" class="icon-stroke"></path></svg>
+                                バイオマス構成
+                            </h3>
+                            <div class="data-grid">
+                                <div class="data-item"><span class="data-key">葉</span><span class="data-value">12.5 MgC/ha</span></div>
+                                <div class="data-item"><span class="data-key">幹</span><span class="data-value">85.3 MgC/ha</span></div>
+                                <div class="data-item"><span class="data-key">根</span><span class="data-value">23.7 MgC/ha</span></div>
+                            </div>
+                        </div>
+                        <div class="sf-card span-2">
+                            <h3 class="card-title">
+                                <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18l6-12 6 12" class="icon-outline"></path></svg>
+                                森林構造
+                            </h3>
+                            <div class="data-grid">
+                                <div class="data-item"><span class="data-key">平均樹高</span><span class="data-value">18.5 m</span></div>
+                                <div class="data-item"><span class="data-key">平均胸高直径</span><span class="data-value">25.3 cm</span></div>
+                                <div class="data-item"><span class="data-key">LAI</span><span class="data-value">4.2</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="main-content">
+                <header class="top-bar">
+                    <div class="logo-area">
+                        <span class="logo-text">SEIB Explorer</span>
+                    </div>
+                    <div class="control-group">
+                        <button class="icon-button" id="theme-toggle">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" id="theme-icon">
+                                <circle cx="12" cy="12" r="5" class="icon-stroke"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3" class="icon-stroke"></line>
+                                <line x1="12" y1="21" x2="12" y2="23" class="icon-stroke"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" class="icon-stroke"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" class="icon-stroke"></line>
+                                <line x1="1" y1="12" x2="3" y2="12" class="icon-stroke"></line>
+                                <line x1="21" y1="12" x2="23" y2="12" class="icon-stroke"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" class="icon-stroke"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" class="icon-stroke"></line>
+                            </svg>
+                            <span id="theme-label">Light Mode</span>
+                        </button>
+                        <button class="icon-button">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18" class="icon-stroke"></path><path d="M3 12h18" class="icon-stroke"></path><path d="M12 3a12 12 0 0 1 0 18" class="icon-stroke"></path></svg>
+                            <span>Japanese</span>
+                        </button>
+                        <button class="icon-button">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h5l2 3h9v9H4z" class="icon-stroke"></path><path d="M4 6V5a1 1 0 0 1 1-1h3" class="icon-stroke"></path></svg>
+                            <span>Open New File</span>
+                        </button>
+                        <button class="icon-button">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h7v5H4z" class="icon-stroke"></path><path d="M13 5h7v7h-7z" class="icon-stroke"></path><path d="M4 12h7v7H4z" class="icon-stroke"></path><path d="M13 15h7v4h-7z" class="icon-stroke"></path></svg>
+                            <span>View Toggle</span>
+                        </button>
+                    </div>
+                </header>
+
+                <section class="visual-area">
+                    <!-- 3D可視化エリア（Unity側で差し替え） -->
+                    
+                    <!-- オーバーレイUI要素 -->
+                    <div class="overlay-ui">
+                        <!-- 中央下部: ビューモード切り替え -->
+                        <div class="overlay-panel overlay-viewmode">
+                            <div class="viewmode-buttons">
+                                <button class="viewmode-btn active" title="Globe View">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10" class="icon-outline"></circle>
+                                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" class="icon-stroke"></path>
+                                    </svg>
+                                    <span>Globe</span>
+                                </button>
+                                <button class="viewmode-btn" title="Map View">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" class="icon-outline"></path>
+                                        <circle cx="12" cy="10" r="3" class="icon-fill"></circle>
+                                    </svg>
+                                    <span>Map</span>
+                                </button>
+                                <button class="viewmode-btn" title="Graph View">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <polyline points="22 6 13.5 14.5 8.5 9.5 2 16" class="icon-stroke"></polyline>
+                                        <polyline points="16 6 22 6 22 12" class="icon-stroke"></polyline>
+                                    </svg>
+                                    <span>Graph</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <footer class="timeline-bar">
+                    <div class="timeline-info">
+                        <span class="info-label">File</span>
+                        <span class="info-value">simulation_output.txt</span>
+                    </div>
+                    <div class="timeline-controls">
+                        <button class="control-button play-button">▶</button>
+                        <span class="year-display" id="yearDisplay">Year 0001</span>
+                        <input type="range" class="timeline-slider" id="timelineSlider" min="0" max="100" value="1">
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

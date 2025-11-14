@@ -40,7 +40,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2537644666880
-    m_Localized: "\u65E5\u672C\u8A9E"
+    m_Localized: grass_view
     m_Metadata:
       m_Items: []
   - m_Id: 17535028736000
@@ -330,4 +330,13 @@ MonoBehaviour:
     - rid: 1666492850979733557
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 00b0e8f2cc14000000b06820f0a5fc0000b028cc3997ba0100b0a877ba97ba0100b0282fd398ba0100b06858d499ba0100b068dca99aba0100b028a02f9bba01
+        m_Entries: 
+        m_SharedEntries:
+        - id: 22870481219584
+        - id: 71114144885551104
+        - id: 124578214200258560
+        - id: 124578766833364992
+        - id: 124579972502827008
+        - id: 124581077001482240
+        - id: 124581994044108800
+        - id: 124582568558899200

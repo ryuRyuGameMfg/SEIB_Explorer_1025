@@ -1,0 +1,40 @@
+=== PDF: /Users/okamotoryuya/プロジェクト/SEIB_Explorer_1025/ドキュメント/SEIB Explorer Quick Start.pdf ===
+
+総ページ数: 1
+
+
+
+--- ページ 1 ---
+
+SEIB-Explore Quick Start Guide / クイックスタートガイド
+Interactive Forest Dynamics Visualization / 森林動態のインタラクティブ可視化ソフトウェア
+Intro Intro
+SEIB-Explore is a Windows application for interactively visualizing forest dynamics simulated by SEIB-Exploreは、SEIB-DGVMでシミュレーションされた森林動態をインタラクティブに可
+SEIB-DGVM. It allows you to explore vegetation growth, succession, and ecosystem functions in an 視化するWindowsアプリケーションです。植生の成長、遷移、そして生態系機能の変化を直
+intuitive, visual way. 感的かつ視覚的に探ることができます。
+1. Input Files / 入力ファイル 1. Input Files / 入力ファイル
+Load one of the following SEIB-DGVM outputs: 以下のSEIB-DGVM出力ファイルを読み込めます:
+- output_forest.txt - output_forest.txt
+- output_VegStructure.txt - output_VegStructure.txt
+- output_for_viewer2.txt (v3.13 or later) - output_for_viewer2.txt (v3.13以降対応)
+2. Display Modes / 表示モード 2. Display Modes / 表示モード
+Real Mode: Trees rendered with game-like assets for visual appeal (education & presentations). リアルモード:
+Simple Mode: Trees shown as cylinders (as assumed in the model) for academic uses. ゲーム用アセットで樹木を表示し、視覚的な魅力を強調（教育・プレゼン向け）。
+シンプルモード: モデルで仮定される円柱形状の樹木表示（学術利用向け）。
+3. Camera Controls / カメラ操作 3. Camera Controls / カメラ操作
+Mouse drag: Change Camera Location マウスドラッグ: 視点位置の変更
+Mouse wheel: Zoom in/out マウスホイール: 拡大・縮小
+4. Key Shortcuts / キーボードショートカット 4. Key Shortcuts / キーボードショートカット
+Arrow keys: Change Camera Location 矢印キー: 視点位置の変更
+PgUp / PgDn: Zoom in/out PgUp / PgDn: 拡大・縮小
+A: Switch language A: 言語切替
+B: Toggle Real / Simple display B: リアル・シンプル表示切替
+C: Change vegetation types shown C: 植生タイプ表示切替
+< / >: Switch items in left panel < / >: 左パネル項目切替
+P / O: Move forward / backward in time P / O: 時間を進める・戻す
+I / U: Adjust time span in info panel I / U: 情報パネルの時間範囲を調整
+5. Notes / 注意事項 5. Notes / 注意事項
+SEIB-DGVM simulates Plant Functional Types (PFTs), not individual species. SEIB-DGVMは個々の樹種ではなく、植物機能型 (PFT) を用いてシミュレーションします。
+Visualization of meteorological data and ecosystem fluxes is available with output_VegStructure output_VegStructureファイルでは気象データや物質・エネルギー循環も可視化可能です。
+files. 「リアルモード」での樹木表示は見た目の演出のみであり、実際の樹種を反映しているわ
+“Real Mode” is for visual enjoyment; species are not represented literally. けではありません。
