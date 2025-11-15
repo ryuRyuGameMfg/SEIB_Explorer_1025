@@ -1,4 +1,5 @@
 #if UNITY_EDITOR
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.Localization;
@@ -46,6 +47,29 @@ public class LocalizationConfigEditor : Editor
         if (GUILayout.Button("シーン内のUI要素に自動設定", GUILayout.Height(30)))
         {
             ApplyToScene();
+        }
+
+        EditorGUILayout.Space();
+        EditorGUILayout.LabelField("日本語・英語の一括設定", EditorStyles.boldLabel);
+        EditorGUILayout.HelpBox("シーン内のすべてのText/TextMeshProUGUIを検索して、日本語と英語の翻訳ペアを設定します。", MessageType.Info);
+
+        if (GUILayout.Button("シーン内のテキストを検索して翻訳ペアを設定", GUILayout.Height(30)))
+        {
+            ScanSceneForTexts();
+        }
+
+        EditorGUILayout.Space();
+        EditorGUILayout.LabelField("コード生成", EditorStyles.boldLabel);
+        EditorGUILayout.HelpBox("設定した翻訳ペアを元に、Start/Awake関数内にコードを生成します。", MessageType.Info);
+
+        if (GUILayout.Button("Start関数用のコードを生成", GUILayout.Height(30)))
+        {
+            GenerateCodeForStart();
+        }
+
+        if (GUILayout.Button("Awake関数用のコードを生成", GUILayout.Height(30)))
+        {
+            GenerateCodeForAwake();
         }
 
         EditorGUILayout.Space();
@@ -283,6 +307,333 @@ public class LocalizationConfigEditor : Editor
             config.mappings.Add(mapping);
             loadedCount++;
         }
+    }
+
+    /// <summary>
+    /// シーン内のすべてのText/TextMeshProUGUIに日本語・英語のローカライズ設定を適用
+    /// </summary>
+    private void SetupAllTextsForLocalization()
+    {
+        int setupCount = 0;
+        int skippedCount = 0;
+
+        // シーン内のすべてのGameObjectを走査
+        GameObject[] allObjects = UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetRootGameObjects();
+        
+        foreach (GameObject rootObj in allObjects)
+        {
+            SetupTextsForLocalization(rootObj, "", ref setupCount, ref skippedCount);
+        }
+
+        EditorUtility.DisplayDialog("完了", 
+            $"設定完了\n設定: {setupCount}件\nスキップ: {skippedCount}件", "OK");
+    }
+
+    /// <summary>
+    /// GameObjectとその子を再帰的に走査してテキストにローカライズ設定を適用
+    /// </summary>
+    private void SetupTextsForLocalization(GameObject obj, string parentPath, ref int setupCount, ref int skippedCount)
+    {
+        string currentPath = string.IsNullOrEmpty(parentPath) ? obj.name : parentPath + "/" + obj.name;
+
+        // Textコンポーネントをチェック
+        Text text = obj.GetComponent<Text>();
+        if (text != null && !string.IsNullOrEmpty(text.text))
+        {
+            SetupTextComponent(obj, currentPath, text.text, LocalizationConfig.ComponentType.Text, ref setupCount, ref skippedCount);
+        }
+
+        // TextMeshProUGUIコンポーネントをチェック
+        TextMeshProUGUI textMesh = obj.GetComponent<TextMeshProUGUI>();
+        if (textMesh != null && !string.IsNullOrEmpty(textMesh.text))
+        {
+            SetupTextComponent(obj, currentPath, textMesh.text, LocalizationConfig.ComponentType.TextMeshProUGUI, ref setupCount, ref skippedCount);
+        }
+
+        // 子オブジェクトを再帰的に処理
+        foreach (Transform child in obj.transform)
+        {
+            SetupTextsForLocalization(child.gameObject, currentPath, ref setupCount, ref skippedCount);
+        }
+    }
+
+    /// <summary>
+    /// テキストコンポーネントにローカライズ設定を適用
+    /// </summary>
+    private void SetupTextComponent(GameObject obj, string path, string currentText, LocalizationConfig.ComponentType componentType, ref int setupCount, ref int skippedCount)
+    {
+        // 既にLocalizedStringComponentがある場合はスキップ
+        var existingComp = obj.GetComponent<LocalizedStringComponent>();
+        if (existingComp != null)
+        {
+            skippedCount++;
+            return;
+        }
+
+        // キーを生成（テキスト内容から、またはGameObject名から）
+        string key = GenerateLocalizationKey(obj.name, currentText);
+
+        // LocalizedStringComponentを追加
+        var localizedStringComp = obj.AddComponent<LocalizedStringComponent>();
+
+        // SerializedObjectでLocalizedStringを設定
+        var serializedObject = new SerializedObject(localizedStringComp);
+        var localStringProp = serializedObject.FindProperty("localizedString");
+        
+        if (localStringProp != null)
+        {
+            // TableReferenceを設定
+            string tableName = config.tableCollectionName;
+            var tableRef = localStringProp.FindPropertyRelative("m_TableReference");
+            if (tableRef != null)
+            {
+                tableRef.FindPropertyRelative("m_TableCollectionName").stringValue = tableName;
+            }
+
+            // EntryReferenceを設定
+            var entryRef = localStringProp.FindPropertyRelative("m_TableEntryReference");
+            if (entryRef != null)
+            {
+                entryRef.FindPropertyRelative("m_Entry").stringValue = key;
+            }
+
+            serializedObject.ApplyModifiedProperties();
+
+            // マッピングにも追加（既に存在しない場合）
+            if (!config.mappings.Exists(m => m.gameObjectPath == path && m.componentType == componentType))
+            {
+                var mapping = new LocalizationConfig.LocalizationMapping
+                {
+                    gameObjectPath = path,
+                    componentType = componentType,
+                    localizationKey = key,
+                    tableCollectionName = tableName,
+                    enabled = true
+                };
+                config.mappings.Add(mapping);
+            }
+
+            setupCount++;
+        }
+    }
+
+    /// <summary>
+    /// ローカライズキーを生成
+    /// </summary>
+    private string GenerateLocalizationKey(string objectName, string text)
+    {
+        // GameObject名からキーを生成（スネークケースに変換）
+        string key = objectName.ToLower()
+            .Replace(" ", "_")
+            .Replace("-", "_")
+            .Replace("(", "")
+            .Replace(")", "")
+            .Replace("[", "")
+            .Replace("]", "");
+
+        // 既に同じキーが存在する場合は番号を追加
+        int counter = 1;
+        string originalKey = key;
+        while (config.mappings.Exists(m => m.localizationKey == key))
+        {
+            key = originalKey + "_" + counter;
+            counter++;
+        }
+
+        return key;
+    }
+
+    /// <summary>
+    /// シーン内のテキストを検索して翻訳ペアを設定
+    /// </summary>
+    private void ScanSceneForTexts()
+    {
+        List<TextInfo> textInfos = new List<TextInfo>();
+
+        // シーン内のすべてのGameObjectを走査
+        GameObject[] allObjects = UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetRootGameObjects();
+        
+        foreach (GameObject rootObj in allObjects)
+        {
+            ScanGameObjectForTexts(rootObj, "", textInfos);
+        }
+
+        // 翻訳ペアを追加（既に存在しない場合）
+        int addedCount = 0;
+        foreach (var textInfo in textInfos)
+        {
+            if (!config.translationPairs.Exists(tp => tp.key == textInfo.key))
+            {
+                var pair = new LocalizationConfig.TranslationPair
+                {
+                    key = textInfo.key,
+                    japanese = textInfo.text,
+                    english = "", // ユーザーが後で設定
+                    enabled = true
+                };
+                config.translationPairs.Add(pair);
+                addedCount++;
+            }
+        }
+
+        EditorUtility.SetDirty(config);
+        EditorUtility.DisplayDialog("完了", 
+            $"テキストを検索しました\n追加: {addedCount}件\n合計: {config.translationPairs.Count}件", "OK");
+    }
+
+    /// <summary>
+    /// GameObjectとその子を再帰的に走査してテキストを検索
+    /// </summary>
+    private void ScanGameObjectForTexts(GameObject obj, string parentPath, List<TextInfo> textInfos)
+    {
+        string currentPath = string.IsNullOrEmpty(parentPath) ? obj.name : parentPath + "/" + obj.name;
+
+        // Textコンポーネントをチェック
+        Text text = obj.GetComponent<Text>();
+        if (text != null && !string.IsNullOrEmpty(text.text))
+        {
+            string key = GenerateLocalizationKey(obj.name, text.text);
+            textInfos.Add(new TextInfo { key = key, text = text.text, path = currentPath });
+        }
+
+        // TextMeshProUGUIコンポーネントをチェック
+        TextMeshProUGUI textMesh = obj.GetComponent<TextMeshProUGUI>();
+        if (textMesh != null && !string.IsNullOrEmpty(textMesh.text))
+        {
+            string key = GenerateLocalizationKey(obj.name, textMesh.text);
+            textInfos.Add(new TextInfo { key = key, text = textMesh.text, path = currentPath });
+        }
+
+        // 子オブジェクトを再帰的に処理
+        foreach (Transform child in obj.transform)
+        {
+            ScanGameObjectForTexts(child.gameObject, currentPath, textInfos);
+        }
+    }
+
+    /// <summary>
+    /// テキスト情報
+    /// </summary>
+    private class TextInfo
+    {
+        public string key;
+        public string text;
+        public string path;
+    }
+
+    /// <summary>
+    /// Start関数用のコードを生成
+    /// </summary>
+    private void GenerateCodeForStart()
+    {
+        string code = GenerateCode("Start");
+        SaveCodeToFile(code, "LocalizationStart.cs");
+    }
+
+    /// <summary>
+    /// Awake関数用のコードを生成
+    /// </summary>
+    private void GenerateCodeForAwake()
+    {
+        string code = GenerateCode("Awake");
+        SaveCodeToFile(code, "LocalizationAwake.cs");
+    }
+
+    /// <summary>
+    /// コードを生成
+    /// </summary>
+    private string GenerateCode(string functionName)
+    {
+        System.Text.StringBuilder sb = new System.Text.StringBuilder();
+        
+        sb.AppendLine("using UnityEngine;");
+        sb.AppendLine("using UnityEngine.Localization;");
+        sb.AppendLine("using UnityEngine.Localization.Tables;");
+        sb.AppendLine();
+        sb.AppendLine("/// <summary>");
+        sb.AppendLine("/// 自動生成されたローカライズ設定コード");
+        sb.AppendLine("/// </summary>");
+        sb.AppendLine("public class LocalizationInitializer : MonoBehaviour");
+        sb.AppendLine("{");
+        sb.AppendLine($"    void {functionName}()");
+        sb.AppendLine("    {");
+        sb.AppendLine("        // ローカライズテーブルを取得");
+        sb.AppendLine($"        var tableCollection = LocalizationSettings.StringDatabase.GetTableCollection(\"{config.tableCollectionName}\");");
+        sb.AppendLine("        if (tableCollection == null)");
+        sb.AppendLine("        {");
+        sb.AppendLine("            Debug.LogError(\"StringTableCollection not found: " + config.tableCollectionName + "\");");
+        sb.AppendLine("            return;");
+        sb.AppendLine("        }");
+        sb.AppendLine();
+        sb.AppendLine("        // 日本語と英語のテーブルを取得");
+        sb.AppendLine("        var japaneseTable = tableCollection.GetTable(\"ja\");");
+        sb.AppendLine("        var englishTable = tableCollection.GetTable(\"en\");");
+        sb.AppendLine();
+        sb.AppendLine("        if (japaneseTable == null || englishTable == null)");
+        sb.AppendLine("        {");
+        sb.AppendLine("            Debug.LogError(\"Japanese or English table not found\");");
+        sb.AppendLine("            return;");
+        sb.AppendLine("        }");
+        sb.AppendLine();
+
+        foreach (var pair in config.translationPairs)
+        {
+            if (!pair.enabled) continue;
+
+            sb.AppendLine($"        // {pair.key}");
+            sb.AppendLine($"        if (!japaneseTable.ContainsKey(\"{pair.key}\"))");
+            sb.AppendLine($"        {{");
+            sb.AppendLine($"            japaneseTable.AddEntry(\"{pair.key}\", \"{EscapeString(pair.japanese)}\");");
+            sb.AppendLine($"        }}");
+            sb.AppendLine($"        else");
+            sb.AppendLine($"        {{");
+            sb.AppendLine($"            japaneseTable.GetEntry(\"{pair.key}\").Value = \"{EscapeString(pair.japanese)}\";");
+            sb.AppendLine($"        }}");
+            sb.AppendLine();
+            sb.AppendLine($"        if (!englishTable.ContainsKey(\"{pair.key}\"))");
+            sb.AppendLine($"        {{");
+            sb.AppendLine($"            englishTable.AddEntry(\"{pair.key}\", \"{EscapeString(pair.english)}\");");
+            sb.AppendLine($"        }}");
+            sb.AppendLine($"        else");
+            sb.AppendLine($"        {{");
+            sb.AppendLine($"            englishTable.GetEntry(\"{pair.key}\").Value = \"{EscapeString(pair.english)}\";");
+            sb.AppendLine($"        }}");
+            sb.AppendLine();
+        }
+
+        sb.AppendLine("        Debug.Log(\"Localization initialized\");");
+        sb.AppendLine("    }");
+        sb.AppendLine("}");
+
+        return sb.ToString();
+    }
+
+    /// <summary>
+    /// 文字列をエスケープ
+    /// </summary>
+    private string EscapeString(string str)
+    {
+        if (string.IsNullOrEmpty(str)) return "";
+        return str.Replace("\\", "\\\\").Replace("\"", "\\\"").Replace("\n", "\\n");
+    }
+
+    /// <summary>
+    /// コードをファイルに保存
+    /// </summary>
+    private void SaveCodeToFile(string code, string fileName)
+    {
+        string path = System.IO.Path.Combine(Application.dataPath, "Scripts/Localization", fileName);
+        string directory = System.IO.Path.GetDirectoryName(path);
+        
+        if (!System.IO.Directory.Exists(directory))
+        {
+            System.IO.Directory.CreateDirectory(directory);
+        }
+
+        System.IO.File.WriteAllText(path, code, System.Text.Encoding.UTF8);
+        AssetDatabase.Refresh();
+        
+        EditorUtility.DisplayDialog("完了", $"コードを生成しました\n{path}", "OK");
     }
 
     /// <summary>

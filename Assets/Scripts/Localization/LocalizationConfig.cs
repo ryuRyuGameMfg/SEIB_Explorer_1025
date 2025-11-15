@@ -18,6 +18,26 @@ public class LocalizationConfig : ScriptableObject
     [Tooltip("UI要素のパスとローカライズキーの対応表")]
     public List<LocalizationMapping> mappings = new List<LocalizationMapping>();
 
+    [Header("日本語・英語翻訳ペア")]
+    [Tooltip("日本語と英語の翻訳ペア（コード生成用）")]
+    public List<TranslationPair> translationPairs = new List<TranslationPair>();
+
+    [System.Serializable]
+    public class TranslationPair
+    {
+        [Tooltip("ローカライズキー名")]
+        public string key;
+
+        [Tooltip("日本語テキスト")]
+        public string japanese;
+
+        [Tooltip("英語テキスト")]
+        public string english;
+
+        [Tooltip("このペアを有効にするか")]
+        public bool enabled = true;
+    }
+
     [System.Serializable]
     public class LocalizationMapping
     {

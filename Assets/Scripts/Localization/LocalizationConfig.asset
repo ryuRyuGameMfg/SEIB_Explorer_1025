@@ -13,4 +13,11 @@ MonoBehaviour:
   m_Name: LocalizationConfig
   m_EditorClassIdentifier: Assembly-CSharp::LocalizationConfig
   tableCollectionName: StringTable
-  mappings: []
+  mappings:
+  - gameObjectPath: 
+    componentType: 0
+    localizationKey: 
+    tableCollectionName: 
+    arguments: []
+    enabled: 0
+  translationPairs: []
